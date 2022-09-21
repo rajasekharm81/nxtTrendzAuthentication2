@@ -22,7 +22,7 @@ class LoginForm extends Component {
 
   onSubmitSuccess = jwtToken => {
     const {history} = this.props
-    Cookies.set('Token', jwtToken, {expires: 7})
+    Cookies.set('jwt_token', jwtToken, {expires: 7})
     history.replace('/')
   }
 
